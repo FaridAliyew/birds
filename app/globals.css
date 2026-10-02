@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-manrope), "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-warm-white: #F2F0E8;
+  --color-warm-muted: rgba(242, 240, 232, 0.55);
+}
+
+:root {
+  --background: #060807;
+  --foreground: #F2F0E8;
+}
+
+html, body {
+  background-color: #060807;
+  color: #F2F0E8;
+  font-family: var(--font-manrope), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lenis Smooth Scroll Core Configuration */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Elegant editorial typography utilities */
+.font-editorial {
+  font-family: var(--font-cormorant), Georgia, serif;
+  letter-spacing: -0.015em;
+}
+
+/* Smooth opacity and transform will-change for GSAP targets */
+.gsap-reveal-item {
+  will-change: transform, opacity;
+}
